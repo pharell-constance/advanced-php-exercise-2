@@ -370,6 +370,77 @@ echo "<br> potion de Métamorphose : " . $Métamorphose;
 echo "<br> potion de LoupGarou : " . $LoupGarou;
 echo "<br> potion de Sérénité : " . $Sérénité;
 echo "<br> potion de Concentration : " . $Concentration;
-?>
+echo "<br> potion de cameleon : " . $Caméléon;
 
 
+    echo "<br><br>". $coutsProduction['Invisibilité'];
+    echo "<br>". $coutsProduction['Mémoire'];
+    echo "<br>". $coutsProduction['Courage'];
+    echo "<br>". $coutsProduction['Puissance'];
+    echo "<br>". $coutsProduction['Rêves'];
+    echo "<br>". $coutsProduction['Charme'];
+    echo "<br>". $coutsProduction['Métamorphose'];
+    echo "<br>". $coutsProduction['Loup-Garou'];
+    echo "<br>". $coutsProduction['Sérénité'];
+    echo "<br>". $coutsProduction['Concentration'];
+
+
+$invisibilityPotionTurnovers = 0;
+$memoryPotionTurnovers = 0;
+$couragePotionTurnovers = 0;
+$powerPotionTurnovers = 0;
+$dreamPotionTurnovers = 0;
+$charmePotionTurnovers = 0;
+$metamorphosisPotionTurnovers = 0;
+$wereWolfPotionTurnovers = 0;
+$serenityPotionTurnovers = 0;
+$focusPotionTurnovers = 0;
+$cameleonPotionTurnovers = 0;
+
+foreach ($commandes as $potionTurnover) {
+    if ($potionTurnover["etat"] == "payé") {
+        if ($potionTurnover["potion"] == "Invisibilité") {
+            $invisibilityPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Mémoire") {
+            $memoryPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Courage") {
+            $couragePotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Puissance") {
+            $powerPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Rêves") {
+            $dreamPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Charme") {
+            $charmePotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Métamorphose") {
+            $metamorphosisPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Loup-Garou") {
+            $wereWolfPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Sérénité") {
+            $serenityPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Concentration") {
+            $focusPotionTurnovers += $potionTurnover["prix"];
+        } else if ($potionTurnover["potion"] == "Caméléon") {
+            $cameleonPotionTurnovers += $potionTurnover["prix"];
+        } 
+    }
+}
+
+echo "<br><br>Chiffre d'affaires potion d'Invisibilité : " . $invisibilityPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Mémoire : " . $memoryPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Courage : " . $couragePotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Puissance : " . $powerPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Rêves : " . $dreamPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Charme : " . $charmePotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Métamorphose : " . $metamorphosisPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Loup-Garou : " . $wereWolfPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Sérénité : " . $serenityPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Concentration : " . $focusPotionTurnovers . "€";
+echo "<br>Chiffre d'affaires potion de Cameleon : " . $cameleonPotionTurnovers . "€";
+
+
+
+
+
+$venteTotalPotion = ($Invisibilité * $invisibilityPotionTurnovers) + ($Mémoire * $memoryPotionTurnovers) + ($Courage * $couragePotionTurnovers)  + ($Puissance * $powerPotionTurnovers) + ($Rêves * $dreamPotionTurnovers) + ($Charme * $charmePotionTurnovers) + ($Métamorphose * $metamorphosisPotionTurnovers) + ($LoupGarou * $wereWolfPotionTurnovers) + ($Sérénité * $serenityPotionTurnovers)  + ($Concentration * $focusPotionTurnovers) + ($Caméléon * $cameleonPotionTurnovers);
+
+echo "<br> les ventes totales des potions sont de : " . $venteTotalPotion - $prixDeProduction. "€";
