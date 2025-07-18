@@ -321,57 +321,55 @@ foreach ($commandes as $totalProfit) {
 
 echo "<br>" . $totalProfits;
 
+$Invisibilité = 0;
+$Mémoire = 0;
+$Courage = 0;
+$Puissance = 0;
+$Rêves = 0;
+$Charme = 0;
+$Métamorphose = 0;
+$LoupGarou = 0;
+$Caméléon = 0;
+$Sérénité = 0;
+$Concentration = 0;
 
+foreach ($commandes as $potionsSales) {
+    if ($potionsSales["potion"] == "Invisibilité") {
+        $Invisibilité++;
+    } elseif ($potionsSales["potion"] == "Mémoire") {
+        $Mémoire++;
+    } elseif ($potionsSales["potion"] == "Courage") {
+        $Courage++;
+    } elseif ($potionsSales["potion"] == "Puissance") {
+        $Puissance++;
+    } elseif ($potionsSales["potion"] == "Rêves") {
+        $Rêves++;
+    } elseif ($potionsSales["potion"] == "Charme") {
+        $Charme++;
+    } elseif ($potionsSales["potion"] == "Métamorphose") {
+        $Métamorphose++;
+    } elseif ($potionsSales["potion"] == "LoupGarou") {
+        $LoupGarou++;
+    } elseif ($potionsSales["potion"] == "Caméléon") {
+        $Caméléon++;
+    } elseif ($potionsSales["potion"] == "Sérénité") {
+        $Sérénité++;
+    } elseif ($potionsSales["potion"] == "Concentration") {
+        $Concentration++;
+    } else {
+    }
+}
 
-
-    $Invisibilité= 0 ;
-    $Mémoire= 0;
-    $Courage= 0;
-    $Puissance= 0;
-    $Rêves= 0;
-    $Charme= 0;
-    $Métamorphose= 0; 
-    $LoupGarou= 0; 
-    $Caméléon= 0; 
-    $Sérénité= 0;
-    $Concentration= 0;
-
-
-
-    foreach ($commandes as $potionsSales){
-        if ($potionsSales["potion"] == "Invisibilité"){
-            $Invisibilité ++ ;}elseif($potionsSales["potion"] == "Mémoire"){
-            $Mémoire ++;}elseif($potionsSales["potion"] == "Courage"){
-            $Courage ++;}elseif($potionsSales["potion"] == "Puissance"){
-            $Puissance ++;}elseif($potionsSales["potion"] == "Rêves"){
-            $Rêves ++;}elseif($potionsSales["potion"] == "Charme"){
-            $Charme ++;}elseif($potionsSales["potion"] == "Métamorphose"){
-            $Métamorphose ++;}elseif($potionsSales["potion"] == "LoupGarou"){
-            $LoupGarou ++;}elseif($potionsSales["potion"] == "Caméléon"){
-            $Caméléon ++;}elseif($potionsSales["potion"] == "Sérénité"){
-            $Sérénité ++;}elseif($potionsSales["potion"] == "Concentration"){
-            $Concentration ++;}else{
-                
-            }            
-            }
-            
-        
-        
-    
-;
-
-echo "<br><br> potion d'Invisibilité : ".$Invisibilité;
-echo "<br> potion de Mémoire : ".$Mémoire;
-echo "<br> potion de Courage : ".$Courage;
-echo "<br> potion de Puissance : ".$Puissance;
-echo "<br> potion de Rêves : ".$Rêves;
-echo "<br> potion de Charme : ".$Charme;
-echo "<br> potion de Métamorphose : ".$Métamorphose;
-echo "<br> potion de LoupGarou : ".$LoupGarou;
-echo "<br> potion de Sérénité : ".$Sérénité;
-echo "<br> potion de Concentration : ".$Concentration;
-
-
+echo "<br><br> potion d'Invisibilité : " . $Invisibilité;
+echo "<br> potion de Mémoire : " . $Mémoire;
+echo "<br> potion de Courage : " . $Courage;
+echo "<br> potion de Puissance : " . $Puissance;
+echo "<br> potion de Rêves : " . $Rêves;
+echo "<br> potion de Charme : " . $Charme;
+echo "<br> potion de Métamorphose : " . $Métamorphose;
+echo "<br> potion de LoupGarou : " . $LoupGarou;
+echo "<br> potion de Sérénité : " . $Sérénité;
+echo "<br> potion de Concentration : " . $Concentration;
 ?>
 
 
